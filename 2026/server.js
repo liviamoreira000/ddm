@@ -11,6 +11,52 @@ app.get("/", (request, response) => {
 
 });   
 
+app.get("/usuario",  (request, response) =>  {
+    response.json({
+        id:  1,
+        nome: "Livia",
+        profissao:"Aluna"
+
+ 
+  });
+
+});
+
+app.get("/usuarios",  (request, response) =>  {
+    response.json([
+       {
+          id:  1,
+          nome: "Maria",
+          profissao:"Mecanica"
+       },
+       {
+          
+        id:  2,
+        nome: "Pedro",
+        profissao:"Profesor",
+
+
+       },
+       {
+      
+        id:  3,
+        nome: "Beatriz",
+        profissao:"Medica",
+
+
+      }
+       
+
+
+
+    ]);
+
+    });
+
+
+    
+    
+
 app.listen(porta, (request, response) => {
     console.log (`Servidor rodando: http://127.0.0.1:${porta}`)
 });
